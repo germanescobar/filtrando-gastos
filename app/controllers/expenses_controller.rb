@@ -4,8 +4,8 @@ class ExpensesController < ApplicationController
     if params[:concept]
       @expenses = @expenses.where("concept like '%#{params[:concept]}%'")
     end
-    if params[:category]
-      @expenses = @expenses.where(category: params[:category])
+    if params[:category_id]
+      @expenses = @expenses.where(category: params[:category_id])
     end
   end
 end
